@@ -2,6 +2,10 @@ package com.volodymyrbaisa.tourguide.ui;
 
 import com.volodymyrbaisa.tourguide.di.ActivityScoped;
 import com.volodymyrbaisa.tourguide.di.FragmentScoped;
+import com.volodymyrbaisa.tourguide.ui.fragments.DiningFragment;
+import com.volodymyrbaisa.tourguide.ui.fragments.EventsFragment;
+import com.volodymyrbaisa.tourguide.ui.fragments.PlacesToStayFragment;
+import com.volodymyrbaisa.tourguide.ui.fragments.ThingsToDoFragment;
 
 import dagger.Binds;
 import dagger.Module;
@@ -13,10 +17,6 @@ import dagger.android.ContributesAndroidInjector;
 
 @Module
 public abstract class MainModule {
-    @FragmentScoped
-    @ContributesAndroidInjector
-    abstract MenuToDoFragment menuToDoFragment();
-
     @FragmentScoped
     @ContributesAndroidInjector
     abstract ThingsToDoFragment thingsToDoFragment();
@@ -35,5 +35,5 @@ public abstract class MainModule {
 
     @ActivityScoped
     @Binds
-    abstract MainContract.Presenter mainPresenter(MainPresenter presenter);
+    abstract MainContract.Presenter fragmentPresenter(MainPresenter presenter);
 }

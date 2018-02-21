@@ -5,4 +5,5 @@ package com.volodymyrbaisa.tourguide.base;
  */
 
 public interface BaseView<T> {
+    void errorMessage(CharSequence msg);
 }

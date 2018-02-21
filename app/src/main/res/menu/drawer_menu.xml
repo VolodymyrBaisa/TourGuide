@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/things_to_do"
+        android:title="@string/things_to_do" />
+    <item
+        android:id="@+id/events"
+        android:title="@string/events" />
+    <item
+        android:id="@+id/dining"
+        android:title="@string/dining" />
+    <item
+        android:id="@+id/places_to_stay"
+        android:title="@string/places_to_stay" />
+</menu>

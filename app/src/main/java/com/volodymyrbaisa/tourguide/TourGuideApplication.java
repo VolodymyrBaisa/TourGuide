@@ -1,5 +1,8 @@
 package com.volodymyrbaisa.tourguide;
 
+
+import com.volodymyrbaisa.tourguide.di.DaggerAppComponent;
+
 import dagger.android.AndroidInjector;
 import dagger.android.DaggerApplication;
 
@@ -8,8 +11,9 @@ import dagger.android.DaggerApplication;
  */
 
 public class TourGuideApplication extends DaggerApplication {
+
     @Override
     protected AndroidInjector<? extends DaggerApplication> applicationInjector() {
-        return null;// DaggerAppComponent.builder().application(this).build();
+        return DaggerAppComponent.builder().application(this).build();
     }
 }

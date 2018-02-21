@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:title="@string/to_do" />
-    <item android:title="@string/things_to_do" />
-    <item android:title="@string/dining"/>
-    <item android:title="@string/places_to_stay" />
-    <item android:title="@string/events" />
-</menu>

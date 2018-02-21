@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Tour Guide</string>
-    <string name="to_do">To Do</string>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
     <string name="things_to_do">Things to do</string>
     <string name="dining">Dining</string>
     <string name="places_to_stay">Places to stay</string>
