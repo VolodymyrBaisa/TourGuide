@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    app:cardElevation="@dimen/cardview_default_elevation"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
     app:cardCornerRadius="@dimen/cardview_default_radius"
+    app:cardElevation="@dimen/cardview_default_elevation"
     app:cardUseCompatPadding="true">
 
     <android.support.constraint.ConstraintLayout
@@ -17,11 +18,106 @@
             android:layout_width="0dp"
             android:layout_height="250dp"
             android:scaleType="fitXY"
-            tools:src="@drawable/reflecting_pool_getty_matthew_t_carroll"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/reflecting_pool_getty_matthew_t_carroll" />
 
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:lines="1"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/image_preview"
+            tools:text="@string/things_to_do" />
+
+        <ImageView
+            android:id="@+id/ic_place"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title"
+            app:srcCompat="@drawable/ic_place" />
+
+        <TextView
+            android:id="@+id/place"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:autoLink="map"
+            android:textColorLink="@color/colorPrimaryText"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/ic_place"
+            app:layout_constraintStart_toEndOf="@+id/ic_place"
+            app:layout_constraintTop_toTopOf="@+id/ic_place"
+            tools:text="@tools:sample/lorem" />
+
+        <ImageView
+            android:id="@+id/ic_price"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ic_place"
+            app:srcCompat="@drawable/ic_attach_money" />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/ic_price"
+            app:layout_constraintStart_toEndOf="@+id/ic_price"
+            app:layout_constraintTop_toTopOf="@+id/ic_price"
+            tools:text="@tools:sample/lorem" />
+
+        <ImageView
+            android:id="@+id/ic_time"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ic_price"
+            app:srcCompat="@drawable/ic_access_time" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/ic_time"
+            app:layout_constraintStart_toEndOf="@+id/ic_time"
+            app:layout_constraintTop_toTopOf="@+id/ic_time"
+            tools:text="@tools:sample/lorem" />
+
+        <ImageView
+            android:id="@+id/ic_web"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ic_time"
+            app:srcCompat="@drawable/ic_web" />
+
+        <TextView
+            android:id="@+id/web"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="8dp"
+            android:autoLink="web"
+            android:textColorLink="@color/colorPrimaryText"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/ic_web"
+            app:layout_constraintStart_toEndOf="@+id/ic_web"
+            app:layout_constraintTop_toTopOf="@+id/ic_web"
+            tools:text="@tools:sample/lorem" />
     </android.support.constraint.ConstraintLayout>
 
 </android.support.v7.widget.CardView>

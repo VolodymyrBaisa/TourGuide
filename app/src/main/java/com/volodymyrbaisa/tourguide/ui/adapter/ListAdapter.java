@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.volodymyrbaisa.tourguide.R;
 import com.volodymyrbaisa.tourguide.data.Item;
@@ -47,6 +48,11 @@ public class ListAdapter extends ArrayAdapter<Item> {
         if (item != null) {
             int imageId = convertView.getResources().getIdentifier(item.getImage()[0], "drawable", convertView.getContext().getPackageName());
             holder.mImagePreview.setImageResource(imageId);
+            holder.mTitle.setText(item.getTitle());
+            holder.mPlace.setText(item.getLocation());
+            holder.mPrice.setText(item.getPrice());
+            holder.mTime.setText(item.getTime());
+            holder.mWeb.setText(item.getWebsite());
         }
 
         return convertView;
@@ -55,6 +61,21 @@ public class ListAdapter extends ArrayAdapter<Item> {
     static final class ViewHolder {
         @BindView(R.id.image_preview)
         protected ImageView mImagePreview;
+
+        @BindView(R.id.title)
+        protected TextView mTitle;
+
+        @BindView(R.id.place)
+        protected TextView mPlace;
+
+        @BindView(R.id.price)
+        protected TextView mPrice;
+
+        @BindView(R.id.time)
+        protected TextView mTime;
+
+        @BindView(R.id.web)
+        protected TextView mWeb;
 
         ViewHolder(View view) {
             ButterKnife.bind(this, view);

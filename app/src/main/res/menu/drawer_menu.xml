@@ -2,14 +2,18 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/things_to_do"
-        android:title="@string/things_to_do" />
+        android:title="@string/things_to_do"
+        android:icon="@drawable/ic_directions_walk"/>
     <item
         android:id="@+id/events"
-        android:title="@string/events" />
+        android:title="@string/events"
+        android:icon="@drawable/ic_event"/>
     <item
         android:id="@+id/dining"
-        android:title="@string/dining" />
+        android:title="@string/dining"
+        android:icon="@drawable/ic_local_dining"/>
     <item
         android:id="@+id/places_to_stay"
-        android:title="@string/places_to_stay" />
+        android:title="@string/places_to_stay"
+        android:icon="@drawable/ic_airline_seat_individual_suite"/>
 </menu>
