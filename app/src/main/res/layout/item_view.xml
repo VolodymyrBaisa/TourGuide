@@ -14,33 +14,29 @@
         android:layout_height="match_parent">
 
         <ImageView
-            android:id="@+id/image_preview"
+            android:id="@+id/image_slider_preview"
             android:layout_width="0dp"
             android:layout_height="250dp"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:src="@drawable/reflecting_pool_getty_matthew_t_carroll" />
+            tools:src="@drawable/american_museum_of_natural_history"/>
 
         <TextView
             android:id="@+id/title"
+            style="@style/TextTitleStyle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:lines="1"
-            android:textColor="@color/colorPrimaryText"
-            android:textSize="25sp"
-            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/image_preview"
+            app:layout_constraintTop_toBottomOf="@id/image_slider_preview"
             tools:text="@string/things_to_do" />
 
         <ImageView
             android:id="@+id/ic_place"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="@dimen/ic_width"
+            android:layout_height="@dimen/ic_height"
             android:layout_marginTop="5dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/title"
@@ -48,73 +44,73 @@
 
         <TextView
             android:id="@+id/place"
+            style="@style/TextDescriptionStyle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
             android:autoLink="map"
             android:textColorLink="@color/colorPrimaryText"
-            android:textSize="15sp"
             app:layout_constraintBottom_toBottomOf="@+id/ic_place"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/ic_place"
             app:layout_constraintTop_toTopOf="@+id/ic_place"
             tools:text="@tools:sample/lorem" />
 
         <ImageView
             android:id="@+id/ic_price"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="@dimen/ic_width"
+            android:layout_height="@dimen/ic_height"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/ic_place"
             app:srcCompat="@drawable/ic_attach_money" />
 
         <TextView
             android:id="@+id/price"
+            style="@style/TextDescriptionStyle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:textSize="15sp"
             app:layout_constraintBottom_toBottomOf="@+id/ic_price"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/ic_price"
             app:layout_constraintTop_toTopOf="@+id/ic_price"
             tools:text="@tools:sample/lorem" />
 
         <ImageView
             android:id="@+id/ic_time"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="@dimen/ic_width"
+            android:layout_height="@dimen/ic_height"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/ic_price"
             app:srcCompat="@drawable/ic_access_time" />
 
         <TextView
             android:id="@+id/time"
+            style="@style/TextDescriptionStyle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:textSize="15sp"
             app:layout_constraintBottom_toBottomOf="@+id/ic_time"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/ic_time"
             app:layout_constraintTop_toTopOf="@+id/ic_time"
             tools:text="@tools:sample/lorem" />
 
         <ImageView
             android:id="@+id/ic_web"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="@dimen/ic_width"
+            android:layout_height="@dimen/ic_height"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/ic_time"
             app:srcCompat="@drawable/ic_web" />
 
         <TextView
             android:id="@+id/web"
+            style="@style/TextDescriptionStyle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
-            android:layout_marginStart="8dp"
             android:autoLink="web"
             android:textColorLink="@color/colorPrimaryText"
-            android:textSize="15sp"
             app:layout_constraintBottom_toBottomOf="@+id/ic_web"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/ic_web"
             app:layout_constraintTop_toTopOf="@+id/ic_web"
             tools:text="@tools:sample/lorem" />

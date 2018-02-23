@@ -46,20 +46,29 @@ public class ListAdapter extends ArrayAdapter<Item> {
         Item item = getItem(position);
 
         if (item != null) {
-            int imageId = convertView.getResources().getIdentifier(item.getImage()[0], "drawable", convertView.getContext().getPackageName());
-            holder.mImagePreview.setImageResource(imageId);
+            int imgRes = convertView.getResources().getIdentifier(item.getImage(),
+                    "drawable", convertView.getContext().getPackageName());
+            holder.mImagePreview.setImageResource(imgRes);
             holder.mTitle.setText(item.getTitle());
-            holder.mPlace.setText(item.getLocation());
-            holder.mPrice.setText(item.getPrice());
-            holder.mTime.setText(item.getTime());
-            holder.mWeb.setText(item.getWebsite());
+            setTextIsNotEmpty(holder.mIcPlace, holder.mPlace, item.getLocation());
+            setTextIsNotEmpty(holder.mIcPrice, holder.mPrice, item.getPrice());
+            setTextIsNotEmpty(holder.mIcTime, holder.mTime, item.getTime());
+            setTextIsNotEmpty(holder.mIcWeb, holder.mWeb, item.getWebsite());
         }
-
         return convertView;
     }
 
+    private void setTextIsNotEmpty(ImageView imageView, TextView textView, String text) {
+        if (!text.isEmpty()) {
+            textView.setText(text);
+        } else {
+            imageView.setVisibility(View.GONE);
+            textView.setVisibility(View.GONE);
+        }
+    }
+
     static final class ViewHolder {
-        @BindView(R.id.image_preview)
+        @BindView(R.id.image_slider_preview)
         protected ImageView mImagePreview;
 
         @BindView(R.id.title)
@@ -76,6 +85,18 @@ public class ListAdapter extends ArrayAdapter<Item> {
 
         @BindView(R.id.web)
         protected TextView mWeb;
+
+        @BindView(R.id.ic_place)
+        protected ImageView mIcPlace;
+
+        @BindView(R.id.ic_price)
+        protected ImageView mIcPrice;
+
+        @BindView(R.id.ic_time)
+        protected ImageView mIcTime;
+
+        @BindView(R.id.ic_web)
+        protected ImageView mIcWeb;
 
         ViewHolder(View view) {
             ButterKnife.bind(this, view);

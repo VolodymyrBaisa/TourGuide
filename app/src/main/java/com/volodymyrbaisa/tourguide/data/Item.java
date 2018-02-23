@@ -7,7 +7,7 @@ package com.volodymyrbaisa.tourguide.data;
 public interface Item {
     String getTitle();
 
-    String[] getImage();
+    String getImage();
 
     String getLocation();
 

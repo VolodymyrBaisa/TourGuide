@@ -10,7 +10,7 @@ public class PlacesToStay implements Item {
     @SerializedName("title")
     private String mTitle;
     @SerializedName("image")
-    private String[] mImage;
+    private String mImage;
     @SerializedName("location")
     private String mLocation;
     @SerializedName("price")
@@ -20,7 +20,7 @@ public class PlacesToStay implements Item {
     @SerializedName("website")
     private String mWebsite;
 
-    public PlacesToStay(String title, String[] image, String location, String price, String time, String website) {
+    public PlacesToStay(String title, String image, String location, String price, String time, String website) {
         this.mTitle = title;
         this.mImage = image;
         this.mLocation = location;
@@ -28,27 +28,27 @@ public class PlacesToStay implements Item {
         this.mTime = time;
         this.mWebsite = website;
     }
-
+    @Override
     public String getTitle() {
         return mTitle;
     }
-
-    public String[] getImage() {
+    @Override
+    public String getImage() {
         return mImage;
     }
-
+    @Override
     public String getLocation() {
         return mLocation;
     }
-
+    @Override
     public String getPrice() {
         return mPrice;
     }
-
+    @Override
     public String getTime() {
         return mTime;
     }
-
+    @Override
     public String getWebsite() {
         return mWebsite;
     }

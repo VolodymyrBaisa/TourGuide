@@ -17,4 +17,24 @@
     <style name="NavigationDrawerStyle">
         <item name="android:textSize">18sp</item>
     </style>
+
+    <style name="TextTitleStyle">
+        <item name="android:lines">1</item>
+        <item name="android:layout_marginStart">@dimen/layout_margin_start</item>
+        <item name="android:layout_marginEnd">@dimen/layout_margin_end</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:textColor">@color/colorPrimaryLite</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="TextDescriptionStyle">
+        <item name="android:lines">1</item>
+        <item name="android:layout_marginStart">@dimen/layout_margin_start</item>
+        <item name="android:layout_marginEnd">@dimen/layout_margin_end</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
 </resources>
